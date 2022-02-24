@@ -5,8 +5,9 @@ const AddCategory = ({ setCategories }) => {
     const [inputState, setInputState] = useState('');
 
     const handleOnChange = (e) => {
-        //console.log(e.target.value);
+        console.log(e.target.value);
         setInputState(e.target.value);
+        console.log('handleOnChange LLamado ');
     };
 
     const handleSubmit = (e) => {
@@ -20,6 +21,7 @@ const AddCategory = ({ setCategories }) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{inputState}</p>
             <input type="text" value={inputState} onChange={handleOnChange}></input>
         </form>
     )
