@@ -17,21 +17,3 @@ exports[`Validamos el componente <GifGrid /> debe de generar el snapshot 1`] = `
   />
 </Fragment>
 `;
-
-exports[`Validamos el componente <GifGrid /> debe de mostrar items cuando se cargan imagenes useFetchGifs 1`] = `
-<Fragment>
-  <h3
-    className="animate__animated animate__fadeIn"
-  >
-    killua
-  </h3>
-  <p
-    className="animate__animated animate__flash"
-  >
-    Loading...
-  </p>
-  <div
-    className="card-grid"
-  />
-</Fragment>
-`;

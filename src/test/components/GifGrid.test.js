@@ -1,8 +1,10 @@
 import {React} from 'react';
+import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
-import GifGrid from "../components/GifGrid";
-import { useFetchGifts } from '../hooks/useFetchGifs';
-jest.mock('../hooks/useFetchGifs');
+import { useFetchGifts } from '../../hooks/useFetchGifs';
+import GifGrid from '../../components/GifGrid';
+jest.mock('../../hooks/useFetchGifs');
+
 
 describe('Validamos el componente <GifGrid />', () => { 
     test('debe de generar el snapshot', () => { 
@@ -15,7 +17,7 @@ describe('Validamos el componente <GifGrid />', () => {
     });
     test('debe de mostrar items cuando se cargan imagenes useFetchGifs', () => { 
         const obj = [{
-            id : 'abc',
+            id : 1,
             url: 'https://localhost/asdfafdssfd/img.jpg',
             title: 'cualquier cosa'
         }]
@@ -24,6 +26,9 @@ describe('Validamos el componente <GifGrid />', () => {
             loading: true
         });
         const wrapper = shallow( <GifGrid category="killua"/>);
-        expect(wrapper).toMatchSnapshot();
+
+        //expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find('p').exists()).toBe(true);
+        expect(wrapper.find('GifGridItem').length).toBe(obj.length)
     });
 })

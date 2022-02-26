@@ -1,7 +1,7 @@
 import { shallow } from "enzyme";
 import { React } from "react";
 import '@testing-library/jest-dom';
-import AddCategory from '../components/AddCategory';
+import AddCategory from '../../components/AddCategory';
 
 describe('Verificar addCategory', () => { 
     const setCategories= jest.fn();

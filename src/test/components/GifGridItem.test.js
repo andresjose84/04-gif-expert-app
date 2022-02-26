@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import {
     shallow
 } from 'enzyme';
-import GifGridItem from '../components/GifGridItem';
+import GifGridItem from '../../components/GifGridItem';
 describe('Pruebas GifGridItem', () => {
             const obj = {
                 id: 1,
