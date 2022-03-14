@@ -9,12 +9,12 @@ const GitExpertApp = ({ defaultCategories = [] }) => {
 
     return (<>
         <h2>GifExpertApp</h2>
-        <AddCategory setCategories={setCategories}></AddCategory>
+        <AddCategory setCategories={ setCategories }></AddCategory>
         <hr />
         <ol>
-            { categories.map((ele,key) => (
-                <GifGrid key = { ele } category={ ele } indx = {key} />
-            ) ) }
+            { categories.map((ele, key) => (
+                <GifGrid key={ ele } category={ ele } indx={ key } />
+            )) }
         </ol>
     </>)
 };
